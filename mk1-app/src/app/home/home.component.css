@@ -1,0 +1,73 @@
+.fighter-table {
+    width: 90%vw;
+    background-color: black;
+    color:lightgoldenrodyellow;
+}
+
+.character-button {
+    margin-top: 5px;
+}
+
+#fighter-span {
+    display: flex;
+    flex-direction: column;
+}
+
+#direction-buttons-div {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.btn-light {
+    margin-top: 5px;
+
+}
+
+#input-moves {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#back-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#select-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin-top: 5px;
+}
+
+.stage-instructions {
+    color: red;
+    text-align: center;
+    /* text-decoration: underline; */
+    margin-top: 25px;
+}
+
+.textbox {
+    width: 600px;
+    height: 200px;
+}
+
+.code-button-box, .textbox {
+    margin-top: 15px;
+    display: flex;
+    justify-content: left;
+}
+
+.textarea {
+    width: inherit;
+}
+
+.code-content-div {
+    width: 50%;
+    background-color: rgb(249, 249, 240);
+}

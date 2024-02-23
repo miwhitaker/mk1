@@ -1,0 +1,7 @@
+body {
+    background: linear-gradient(#fff1c4, #7ad7f0) no-repeat center center fixed;
+}
+
+.btn-light {
+    border: solid 1px #eee;
+}
