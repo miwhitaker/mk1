@@ -45,9 +45,6 @@ export class HomeComponent {
 
   thisCode(code:string) {
     let codeArray = code.split('-');
-    // for(let i = 0; i < codeArray.length; i++) {
-    //   this.fatalitiesViewed[parseInt(codeArray[i])] = true;
-    // }
     for(let code of codeArray) {
       this.fatalitiesViewed[parseInt(code)] = true;
     }
@@ -143,10 +140,10 @@ export class HomeComponent {
           buttonPress = 'b-button'
         }
         else if(move === 'block') {
-          buttonPress = 'RB-button'
-        }
-        else if(move === 'block') {
           buttonPress = 'RT-button'
+        }
+        else if(move === 'kameo') {
+          buttonPress = 'RB-button'
         }
         else{
             buttonPress = move;

@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+    background-color:gray
+}
+
+.distance-div {
+    font-size: 36;
+    color: blue;
+    text-shadow:black
+}
