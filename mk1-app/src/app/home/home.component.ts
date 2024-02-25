@@ -140,10 +140,10 @@ export class HomeComponent {
           buttonPress = 'b-button'
         }
         else if(move === 'block') {
-          buttonPress = 'RT-button'
+          buttonPress = 'rt-button'
         }
         else if(move === 'kameo') {
-          buttonPress = 'RB-button'
+          buttonPress = 'rb-button'
         }
         else{
             buttonPress = move;
