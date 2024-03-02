@@ -7,14 +7,12 @@
     <div class="row">
         <hr />
         <div id="fighter-span" class="col-4">
-            <button type="button" class=""
-                (click)="userInput()">
+            <button type="button" class="" (click)="userInput()">
                 Bob
             </button>
         </div>
         <div id="fighter-span" class="col-4">
-            <button type="button" class=""
-                (click)="userInput()">
+            <button type="button" class="" (click)="userInput()">
                 Mike
             </button>
         </div>
@@ -24,14 +22,14 @@
 
 <div class="container" *ngIf="currentScreen==='code'">
     <h1>Do you have a code from last time</h1>
-    <div class = "textbox">
-        <textarea class = "textarea" type="text" id = "textAreaValue" #codeValue></textarea>
+    <div class="textbox">
+        <textarea class="textarea" type="text" id="textAreaValue" #codeValue>{{savedCode}}</textarea>
     </div>
-    <div class = "code-button-box">
-        <button (click) = "thisCode(codeValue.value)">Use This Code</button>
-        <button (click) = "noCode()">I ain't gots one</button>
+    <div class="code-button-box">
+        <button (click)="thisCode(codeValue.value)">Use This Code</button>
+        <button (click)="noCode()">I ain't gots one</button>
     </div>
-    
+
 </div>
 
 
@@ -46,7 +44,7 @@
         <div id="fighter-span" class="col-12">
             <button *ngFor="let fighter of fighters" type="button" class="btn btn-light character-button"
                 (click)="chooseYourFighter(fighter)" [value]="fighter">
-                
+
                 {{fighter | titlecase}}
             </button>
         </div>
@@ -64,32 +62,32 @@
         </div>
         <div class="row">
             <div id="select-page">
-                <!-- <button type="button" 
-                    *ngFor="let move of allMovesForCharacter; index as i" 
-                    (click)="goToDirectionPage(i)" value = i  
+                <!-- <button type="button"
+                    *ngFor="let move of allMovesForCharacter; index as i"
+                    (click)="goToDirectionPage(i)" value = i
                         class="btn btn-light">
                         <svg *ngIf="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
                         </svg>
                         {{move |titlecase}}
                 </button> -->
-                <button type="button" 
-                    (click)="goToDirectionPage(0)" value = 0
-                        class="btn btn-light">
-                        <svg *ngIf="checkOne" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                        </svg>
-                        {{allMovesForCharacter[0] |titlecase}}
+                <button type="button" (click)="goToDirectionPage(0)" value=0 class="btn btn-light">
+                    <svg *ngIf="checkOne" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                    {{allMovesForCharacter[0] |titlecase}}
                 </button>
-                <button type="button" 
-                    (click)="goToDirectionPage(1)" value = 1 
-                        class="btn btn-light">
-                        <svg *ngIf="checkTwo" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                        </svg>
-                        {{allMovesForCharacter[1] |titlecase}}
+                <button type="button" (click)="goToDirectionPage(1)" value=1 class="btn btn-light">
+                    <svg *ngIf="checkTwo" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green"
+                        class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                    </svg>
+                    {{allMovesForCharacter[1] |titlecase}}
                 </button>
-                <!-- <button type="button" 
+                <!-- <button type="button"
                     (click)="goToDirectionPage(2)" value = 2
                         class="btn btn-light">
                         <svg *ngIf="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -97,7 +95,7 @@
                         </svg>
                         {{allMovesForCharacter[2] |titlecase}}
                 </button>
-                <button type="button" 
+                <button type="button"
                     (click)="goToDirectionPage(3)" value = 3
                         class="btn btn-light">
                         <svg *ngIf="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -105,7 +103,7 @@
                         </svg>
                         {{allMovesForCharacter[3] |titlecase}}
                 </button>
-                <button type="button" 
+                <button type="button"
                     (click)="goToDirectionPage(4)" value = 4
                         class="btn btn-light">
                         <svg *ngIf="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
@@ -113,11 +111,8 @@
                         </svg>
                         {{allMovesForCharacter[4] |titlecase}}
                 </button> -->
-                <button class="go-back-button" 
-                        type="button" 
-                        (click)="goBack()" 
-                        class="btn btn-primary">
-                            Go Back
+                <button class="go-back-button" type="button" (click)="goBack()" class="btn btn-primary">
+                    Go Back
                 </button>
                 <div class="stage-instructions">
                     <p>
@@ -173,8 +168,8 @@
 
 <div class="container" *ngIf="currentScreen==='showCode'">
     <h1>Your code for next time is: </h1>
-    <div class = "code-content-div">
+    <div class="code-content-div">
         <p>{{currentCode}}</p>
     </div>
-    
+
 </div>
