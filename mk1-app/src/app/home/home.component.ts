@@ -29,6 +29,7 @@ export class HomeComponent {
   currentCode = '';
   checkOne;
   checkTwo;
+  savedCode = '';
 
   ngOnInit() {
     this.currentScreen = 'home';
@@ -40,6 +41,7 @@ export class HomeComponent {
 
   userInput() {
     this.currentScreen = 'code';
+    this.savedCode = localStorage.getItem('saveCode') || "";
     console.log("viewed these: ", this.fatalitiesViewed);
   }
 
@@ -63,12 +65,12 @@ export class HomeComponent {
     this.allMovesForCharacter.push(this.moveList.fatality1.name);
 
     if(!this.currentFighter.includes('Kameo')) {
-      this.allMovesForCharacter.push(this.moveList.fatality2?.name); 
+      this.allMovesForCharacter.push(this.moveList.fatality2?.name);
     }
 
     this.checkOne = this.fatalitiesViewed[this.moveList.fatality1.id];
     this.checkTwo = this.fatalitiesViewed[this.moveList.fatality2?.id];
-    
+
     // this.allMovesForCharacter.push('STAGE');
     // this.allMovesForCharacter.push('FRIENDSHIP: ' + this.moveList?.friendship.name);
     // this.allMovesForCharacter.push('BRUTALITY: ' + this.moveList?.brutality.name);
@@ -108,7 +110,7 @@ export class HomeComponent {
         else {
             modDirection.push(keyPress);
         }
-    
+
         this.fatalityInput = modDirection;
         console.log("modified: " + modDirection)
     }
@@ -180,6 +182,7 @@ export class HomeComponent {
     if(this.currentCode) {
       this.currentCode = this.currentCode.substring(0, this.currentCode.length - 1);
     }
+    localStorage.setItem('saveCode', this.currentCode);
 
     this.currentScreen = "showCode";
   }
